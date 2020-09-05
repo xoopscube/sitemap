@@ -17,9 +17,11 @@ Automated HTML sitemap and XML for search engines.
 
 ### Wizard Installer  
 
-Clone this repo or download Sitemap and unzip in your web server's public directory (e.g. /var/www/html/modules/sitemap).  
+Clone this repo or download Sitemap and unzip in your web server's public directory  
+(e.g. /var/www/html/modules/sitemap).  
 Launch your browser and login to your XCL installation.  
-Install the module Sitemap from Administration > Module Management and follow the XCL Wizard Installer step-by-step process to complete the installation.
+Install the module Sitemap from **Administration > Module Installation**  
+and follow the XCL Wizard Installer step-by-step process to complete the installation.
 
 ### 
 

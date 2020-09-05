@@ -1,0 +1,19 @@
+<{strip}>
+
+<h2><img src="<{$xoops_url}>/modules/sitemap/images/sitemap.svg" alt="<{$smarty.const._MD_SITEMAP_HOME}>"> <{$smarty.const._MI_SITEMAP_NAME}></h2>
+
+
+<p><{$msgs}></p>
+<hr>
+
+<div align="right">
+  <img src="<{$xoops_url}>/modules/sitemap/images/map.gif">
+  <a href="<{$xoops_url}>/"><{$smarty.const._MD_SITEMAP_HOME}></a>
+</div>
+
+
+<{foreach name=i item=module from=$sitemap.modules}>
+  <{include file="db:sitemap_inc_eachmodule.html" div_style="width:30%;float:left;margin:10px;"}>
+<{/foreach}>
+
+<{/strip}>

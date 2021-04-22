@@ -6,6 +6,6 @@
 
 function b_sitemap_myAds(){
 	$xoopsDB =& Database::getInstance();
-	$block = sitemap_get_categoires_map($xoopsDB->prefix("ann_categories"), "cid", "pid", "title", "index.php?pa=view&amp;cid=", "title");
+	$block = sitemap_get_categories_map($xoopsDB->prefix("ann_categories"), "cid", "pid", "title", "index.php?pa=view&amp;cid=", "title");
 	return $block;
 }

@@ -8,7 +8,7 @@
 function b_sitemap_catads(){
 	$xoopsDB =& Database::getInstance();
 
-    $block = sitemap_get_categoires_map($xoopsDB->prefix("catads_cat"), "cat_id", "pid", "title", "adslist.php?cat_id=", "title");
+    $block = sitemap_get_categories_map($xoopsDB->prefix("catads_cat"), "cat_id", "pid", "title", "adslist.php?cat_id=", "title");
 
 	return $block;
 }

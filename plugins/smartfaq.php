@@ -8,7 +8,7 @@
 function b_sitemap_smartfaq(){
 	$xoopsDB =& Database::getInstance();
 
-    $block = sitemap_get_categoires_map($xoopsDB->prefix("smartfaq_categories"), "categoryid", "parentid", "name", "category.php?categoryid=", "name");
+    $block = sitemap_get_categories_map($xoopsDB->prefix("smartfaq_categories"), "categoryid", "parentid", "name", "category.php?categoryid=", "name");
 
 	return $block;
 }

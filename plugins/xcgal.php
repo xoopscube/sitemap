@@ -4,6 +4,6 @@
 
 function b_sitemap_xcgal(){
 $xoopsDB =& Database::getInstance();
-$block = sitemap_get_categoires_map($xoopsDB->prefix("xcgal_categories"), "cid", "parent", "name", "index.php?cat=", "pos");
+$block = sitemap_get_categories_map($xoopsDB->prefix("xcgal_categories"), "cid", "parent", "name", "index.php?cat=", "pos");
 return $block;
 }

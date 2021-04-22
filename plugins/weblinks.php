@@ -11,7 +11,7 @@ function b_sitemap_weblinks(){
 	// news
 //     $maptree = new SitemapTree($xoopsDB->prefix("topics"), "topic_id", "topic_pid");
 //     $block = $maptree->getCategoriesMap("topic_title", "topic_title");
-    $block = sitemap_get_categoires_map($xoopsDB->prefix("weblinks_category"), "cid", "pid", "title", "viewcat.php?cid=", "title");
+    $block = sitemap_get_categories_map($xoopsDB->prefix("weblinks_category"), "cid", "pid", "title", "viewcat.php?cid=", "title");
     //$block["path"] = "viewcat.php?cid=";
 
 	return $block;

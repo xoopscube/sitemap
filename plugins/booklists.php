@@ -8,7 +8,7 @@
 function b_sitemap_booklists(){
 	$xoopsDB =& Database::getInstance();
 
-    $block = sitemap_get_categoires_map($xoopsDB->prefix("mybooks_cat"), "cid", "pid", "title", "viewcat.php?cid=", "title");
+    $block = sitemap_get_categories_map($xoopsDB->prefix("mybooks_cat"), "cid", "pid", "title", "viewcat.php?cid=", "title");
     //$block["path"] = "viewcat.php?cid=";
 
 	return $block;

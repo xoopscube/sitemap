@@ -2,6 +2,7 @@
 
 require '../../mainfile.php' ;
 
+
 $xoopsOption['template_main'] = 'sitemap_index.html' ;
 include XOOPS_ROOT_PATH.'/header.php' ;
 
@@ -46,4 +47,3 @@ $xoopsTpl->assign('this', [
 ]);
 
 include XOOPS_ROOT_PATH . '/footer.php';
-

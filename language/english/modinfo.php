@@ -9,8 +9,8 @@ define('_MI_SITEMAP_ADMENU_MYBLOCKSADMIN', 'Blocks/Groups' ) ;
 define('_MI_SITEMAP_BLOCKNAME', 'Sitemap');
 define('_MI_SITEMAP_BLOCKDESC', 'Show sitemap as a block.');
 
-define('_MI_MESSAGE', 'Message');
-define('_MI_MESSAGEEDSC', '');
+define('_MI_MESSAGE', 'Message [html]');
+define('_MI_MESSAGEEDSC', 'Message to appear on the page');
 
 define('_MI_SHOW_SUBCATEGORIES', 'Show sub-categories');
 define('_MI_SHOW_SUBCATEGORIESDSC', '');

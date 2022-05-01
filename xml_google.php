@@ -1,4 +1,14 @@
 <?php
+/**
+ * Sitemap
+ * Automated Sitemap and XML file for search engines
+ * @package    Sitemap
+ * @version    2.3.1
+ * @author     Gigamaster, 2020 XCL PHP7
+ * @author     chanoir
+ * @copyright  Copyright 2005-2022 Authors
+ * @license    https://github.com/xoopscube/xcl/blob/master/docs/GPL_V2.txt
+ */
 
 if( ! defined( 'SITEMAP_ROOT_CONTROLLER_LOADED' ) ) {
 	if( ! file_exists( __DIR__ .'/modules/sitemap/xml_google.php' ) ) {
@@ -54,7 +64,8 @@ $sitemap = sitemap_show();
 //	$xoopsUser =& $member_handler->getUser( $backup_uid ) ;
 //	$xoopsUserIsAdmin = $xoopsUser->isAdmin();
 //}
-
+// Identical to the date() function except that the time returned is Greenwich Mean Time (GMT)
+// simple UTC timestamp : gmdate("Y-m-d\TH:i:s\Z");
 $xoopsTpl->assign('lastmod', gmdate( 'Y-m-d\TH:i:s\Z' ) ); // TODO
 $xoopsTpl->assign('sitemap', $sitemap);
 $xoopsTpl->assign('msgs', $myts->displayTarea($msgs,1));

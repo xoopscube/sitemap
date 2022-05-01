@@ -1,4 +1,15 @@
 <?php
+/**
+ * Sitemap
+ * Automated Sitemap and XML file for search engines
+ * @package    Sitemap
+ * @version    2.3.1
+ * @author     Other authors gigamaster, 2020 XCL/PHP7
+ * @author     Ryuji
+ * @author     chanoir
+ * @copyright  Copyright 2005-2022 Authors
+ * @license    https://github.com/xoopscube/xcl/blob/master/docs/GPL_V2.txt
+ */
 
 include_once(XOOPS_ROOT_PATH . '/class/xoopstree.php');
 
@@ -42,10 +53,12 @@ function sitemap_show()
 			$block['modules'][$i]['id'] = $i;
 			$block['modules'][$i]['name'] = $modules[$i]->getVar('name');
 			$block['modules'][$i]['directory'] = $modules[$i]->getVar('dirname');
+
 			$old_error_reporting = error_reporting() ;
 			error_reporting( $old_error_reporting & (~E_NOTICE) ) ;
 			$sublinks =& $modules[$i]->subLink();
 			error_reporting( $old_error_reporting ) ;
+
 			if (count($sublinks) > 0) {
 				foreach($sublinks as $sublink){
 					$block['modules'][$i]['sublinks'][] = ['name' => $sublink['name'], 'url' => XOOPS_URL.'/modules/'.$modules[$i]->getVar('dirname').'/'.$sublink['url']];

@@ -1,7 +1,6 @@
 <?php
 function b_sitemap_xoopspoll(){
 	$db =& Database::getInstance();
-
 	$myts =& MyTextSanitizer::getInstance();
 
 	global $xoopsConfig;

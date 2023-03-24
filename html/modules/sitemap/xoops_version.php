@@ -6,16 +6,16 @@
  * @version    2.3.1
  * @author     Gigamaster, 2020 XCL PHP7
  * @author     chanoir
- * @copyright  Copyright 2005-2022 Authors
- * @license    GPL V2
+ * @copyright  (c) 2005-2023 Authors
+ * @license    GPL V2.0
  */
 
 
 // Manifesto
 $modversion['dirname']          = 'sitemap';
 $modversion['name']             = _MI_SITEMAP_NAME;
-$modversion['version']          = '2.32';
-$modversion['detailed_version'] = '2.32.0';
+$modversion['version']          = '2.33';
+$modversion['detailed_version'] = '2.33.0';
 $modversion['description']      = 'Automated Sitemap and XML file for search engines';
 $modversion['author']           = 'chanoir';
 $modversion['credits']          = 'The XOOPSCube Project';

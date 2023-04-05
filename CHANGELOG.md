@@ -1,4 +1,12 @@
 
+
+[2023-03-31] version 2.33.2
+
+- Add language russian
+- Fix language translations
+- Fix block template
+- Remove block[lang] PHP8
+
 [2023-03-23] version 2.33.0
 
 Update version XCL PHP8

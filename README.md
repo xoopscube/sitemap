@@ -14,7 +14,7 @@ MODULE | SITEMAP
 ------------ | -------------
 Description | Module to Automated HTML sitemap and XML for search engines.
 Render Engine | Smarty v2 and XCube Layout
-Version | 2.33.0 
+Version | 2.33.2 
 Author | Nuno Luciano @gigamaster XCL PHP7  
 Author | Plugins by several modules developers
 Author | Chatnoir's original work

@@ -3,11 +3,11 @@
  * Sitemap
  * Automated Sitemap and XML file for search engines
  * @package    Sitemap
- * @version    2.3.1
+ * @version    2.4.0
  * @author     Other authors gigamaster, 2020 XCL/PHP7
  * @author     Ryuji
  * @author     chanoir
- * @copyright  (c) 2005-2023 Authors
+ * @copyright  (c) 2005-2024 Authors
  * @license    GPL v.2.0
  */
 
@@ -32,7 +32,6 @@ function sitemap_show()
 
 	$module_handler =& xoops_gethandler('module');
 
-
 	$criteria = new CriteriaCompo(new Criteria('hasmain', 1));
 	$criteria->add(new Criteria('isactive', 1));
 
@@ -56,6 +55,7 @@ function sitemap_show()
 			$sublinks =& $modules[$i]->subLink();
 			error_reporting( $old_error_reporting ) ;
 
+			//if ((is_countable($sublinks) ? count($sublinks) : 0) > 0) {
 			if (count($sublinks) > 0) {
 				foreach($sublinks as $sublink){
 					$block['modules'][$i]['sublinks'][] = ['name' => $sublink['name'], 'url' => XOOPS_URL.'/modules/'.$modules[$i]->getVar('dirname').'/'.$sublink['url']];
@@ -152,7 +152,8 @@ function sitemap_show()
 function sitemap_get_categories_map($table, $id_name, $pid_name, $title_name, $url, $order = ""){
 	global $sitemap_configs;
 	$mytree = new XoopsTree($table, $id_name, $pid_name);
-	$xoopsDB =& Database::getInstance();
+	
+	$xoopsDB = XoopsDatabaseFactory::getDatabaseConnection();
 
 	$sitemap = [];
 	$myts =& MyTextSanitizer::getInstance();
@@ -164,7 +165,7 @@ function sitemap_get_categories_map($table, $id_name, $pid_name, $title_name, $u
 		$sql .= " ORDER BY `$order`" ;
 	}
 	$result = $xoopsDB->query($sql);
-	while (list($catid, $name) = $xoopsDB->fetchRow($result))
+	while ([$catid, $name] = $xoopsDB->fetchRow($result))
 	{
         // Parent output
 		$sitemap['parent'][$i]['id'] = $catid;

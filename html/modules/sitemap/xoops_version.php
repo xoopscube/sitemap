@@ -12,9 +12,9 @@
 
 // Manifesto
 $modversion['dirname']          = 'sitemap';
-$modversion['name']             = _MD_SITEMAP_NAME;
-$modversion['version']          = '2.40';
-$modversion['detailed_version'] = '2.40.0';
+$modversion['name']             = _MI_SITEMAP_NAME;
+$modversion['version']          = '2.41';
+$modversion['detailed_version'] = '2.41.0';
 $modversion['description']      = _MI_SITEMAP_DESC;
 $modversion['author']           = 'chanoir';
 $modversion['credits']          = 'The XOOPSCube Project';
